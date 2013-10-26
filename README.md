@@ -14,10 +14,10 @@ Eulerova funkce φ udává pro zadané celé kladné číslo n počet čísel 1,
    5   soudělné (5)        
    6   soudělné (3)      
 *  7   nesoudělné        
-*  8   nesoudělné
-   9   soudělné (3)
+*  8   nesoudělné<br />
+   9   soudělné (3)<br />
   10   soudělné (5) 
-* 11   nesoudělné
+* 11   nesoudělné<br />
   12   soudělné (3)
 * 13   nesoudělné
 * 14   nesoudělné
