@@ -75,8 +75,8 @@ int main(int argc, char** argv) {
     if (!n) return 0;
     phi = evalPhi(n);
     printf("phi(%d) = %ld\n", n, phi);
-    phi = evalPhiSlow(n);
-    printf("phi(%d) = %ld\n", n, phi);
+    //phi = evalPhiSlow(n);
+    //printf("phi(%d) = %ld\n", n, phi);
     return (EXIT_SUCCESS);
 }
 
