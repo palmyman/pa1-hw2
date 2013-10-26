@@ -26,6 +26,7 @@ int readN() {
 }
 
 int divideWhilePossible(int * arg, int n) {
+    if(n <= 1) return 1;
     int possible = 0;
     while (!(* arg % n)) {
         * arg /= n;
@@ -41,7 +42,7 @@ int evalPhi(int n) {
     //    while(1) {
     //        if(n %= i) phi *= ((i-1)) / (i);
     //    }
-    divideWhilePossible(&n, 2);
+    divideWhilePossible(&n, 1);
 
     return n;
 }
