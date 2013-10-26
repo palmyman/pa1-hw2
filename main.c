@@ -35,15 +35,16 @@ int divideWhilePossible(int * arg, int n) {
     return possible;
 }
 
-int evalPhi(int x) {
-    int phi, i;
+long int evalPhi(int x) {
+    long unsigned int phi;
+    int i;
     phi = x;
     for (i = 2; i <= x; i++) {
         if (divideWhilePossible(&x, i)) {
             phi *= (i - 1);
-            phi /= i;
-            //printf("i = %d, x = %d, phi = %d\n", i, x, phi);
+            phi /= i;            
         }
+        //printf("i = %d, x = %d, phi = %ld\n", i, x, phi);
     }
     return phi;
 }
@@ -52,11 +53,12 @@ int evalPhi(int x) {
  * 
  */
 int main(int argc, char** argv) {
-    int n, phi;
+    int n;
+    long unsigned int phi;
     n = readN();
     if (!n) return 0;
     phi = evalPhi(n);
-    printf("phi(%d) = %d\n", n, phi);
+    printf("phi(%d) = %ld\n", n, phi);
     return (EXIT_SUCCESS);
 }
 
