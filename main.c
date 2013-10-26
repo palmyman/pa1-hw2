@@ -37,15 +37,15 @@ int divideWhilePossible(int * arg, int n) {
 
 long int evalPhi(int x) {
     long unsigned int phi;
-    int i;
+    int i;    
     phi = x;
-    for (i = 2; i <= x; i++) {
+    for (i = 2; i*i <= x; i++) {
         if (divideWhilePossible(&x, i)) {
-            phi *= (i - 1);
-            phi /= i;            
-        }
+            phi -= phi / i;      
+        }        
         //printf("i = %d, x = %d, phi = %ld\n", i, x, phi);
     }
+    if(x > 1) phi -= phi / x;
     return phi;
 }
 
