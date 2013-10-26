@@ -35,6 +35,21 @@ int divideWhilePossible(int * arg, int n) {
     return possible;
 }
 
+long int evalPhiSlow(int x) {
+    long unsigned int phi;
+    int i;    
+    phi = x;
+    for (i = 2; i <= x; i++) {
+        if (divideWhilePossible(&x, i)) {
+            phi *= (i - 1);
+            phi /= i;            
+        }
+        //printf("i = %d, x = %d, phi = %ld\n", i, x, phi);
+    }
+    //printf("slow = %d\n", i);
+    return phi;
+}
+
 long int evalPhi(int x) {
     long unsigned int phi;
     int i;    
@@ -46,6 +61,7 @@ long int evalPhi(int x) {
         //printf("i = %d, x = %d, phi = %ld\n", i, x, phi);
     }
     if(x > 1) phi -= phi / x;
+    //printf("fast = %d\n", i);
     return phi;
 }
 
@@ -58,6 +74,8 @@ int main(int argc, char** argv) {
     n = readN();
     if (!n) return 0;
     phi = evalPhi(n);
+    printf("phi(%d) = %ld\n", n, phi);
+    phi = evalPhiSlow(n);
     printf("phi(%d) = %ld\n", n, phi);
     return (EXIT_SUCCESS);
 }
