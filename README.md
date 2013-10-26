@@ -7,13 +7,20 @@ Programming in C - Homework 2 (Euler function)
 
 Eulerova funkce φ udává pro zadané celé kladné číslo n počet čísel 1, 2, 3, ..., n-1 takových, že jsou nesoudělná s n. Dvě čísla jsou soudělná, pokud mají alespoň jednoho společného dělitele ≥ 2. Tedy například pro číslo 15:
 
-*  1   nesoudělné        *  8   nesoudělné
-*  2   nesoudělné           9   soudělné (3) 
-   3   soudělné (3)        10   soudělné (5) 
-*  4   nesoudělné        * 11   nesoudělné  
-   5   soudělné (5)        12   soudělné (3)  
-   6   soudělné (3)      * 13   nesoudělné
-*  7   nesoudělné        * 14   nesoudělné
+*  1   nesoudělné        
+*  2   nesoudělné          
+   3   soudělné (3)        
+*  4   nesoudělné        
+   5   soudělné (5)        
+   6   soudělné (3)      
+*  7   nesoudělné        
+*  8   nesoudělné
+  9   soudělné (3)
+10   soudělné (5) 
+* 11   nesoudělné
+12   soudělné (3)
+* 13   nesoudělné
+* 14   nesoudělné
 
 Tedy φ(15) = 8, protože nesoudělných s 15 je celkem 8 čísel (1, 2, 4, 7, 8, 11, 13 a 14).
 
