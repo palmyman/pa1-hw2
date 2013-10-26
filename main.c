@@ -9,7 +9,7 @@
 #include <stdlib.h>
 
 int inputCheck(int n, int check) {
-    if (check != 1 || n < 0) {
+    if (check != 1 || n <= 0) {
         printf("Nespravny vstup.\n"); //Invalid input
         return 0;
     }
